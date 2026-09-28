@@ -1,272 +1,46 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #0b120b;
-  color: #f1f1f1;
+    background-color: #182518;
+    color: white;
+    font-family: Arial;
+    margin: 0;
 }
-
-/* HEADER */
 
 header {
-  background: #071007;
-  border-bottom: 2px solid #4caf50;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+    background-color: #0b120b;
+    text-align: center;
+    padding: 30px;
 }
 
-nav {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+h1 {
+    color: #4caf50;
+    font-size: 40px;
 }
 
-nav h1 {
-  font-size: 28px;
-  letter-spacing: 3px;
-  color: white;
+h2 {
+    color: #4caf50;
 }
 
-nav h1 span {
-  color: #4caf50;
+main {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
+.temporada {
+    background-color: #263526;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+.temporada h3 {
+    color: #8bc34a;
 }
-
-nav a:hover {
-  color: #4caf50;
-}
-
-/* HERO */
-
-.hero {
-  min-height: 85vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 20, 0, 0.85)),
-    linear-gradient(135deg, #182818, #071007);
-}
-
-.hero-content {
-  max-width: 800px;
-  padding: 30px;
-}
-
-.subtitulo {
-  color: #75c943;
-  letter-spacing: 4px;
-  font-size: 14px;
-  margin-bottom: 15px;
-}
-
-.hero h2 {
-  font-size: clamp(50px, 10vw, 100px);
-  letter-spacing: 8px;
-  margin-bottom: 25px;
-  color: white;
-}
-
-.hero-content > p:not(.subtitulo) {
-  font-size: 19px;
-  line-height: 1.7;
-  color: #ddd;
-  margin-bottom: 35px;
-}
-
-.botao {
-  display: inline-block;
-  background: #4caf50;
-  color: white;
-  padding: 15px 30px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 4px;
-  transition: 0.3s;
-}
-
-.botao:hover {
-  background: #2e7d32;
-  transform: translateY(-3px);
-}
-
-/* TEMPORADAS */
-
-.temporadas {
-  max-width: 1200px;
-  margin: auto;
-  padding: 90px 20px;
-}
-
-.temporadas h2,
-.sobre h2 {
-  text-align: center;
-  font-size: 42px;
-  margin-bottom: 15px;
-  color: #75c943;
-}
-
-.introducao {
-  text-align: center;
-  color: #bbb;
-  margin-bottom: 50px;
-}
-
-/* CARDS */
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-}
-
-.card {
-  background: #111b11;
-  border: 1px solid #263b26;
-  border-radius: 8px;
-  overflow: hidden;
-  display: flex;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-7px);
-  border-color: #4caf50;
-  box-shadow: 0 10px 30px rgba(76, 175, 80, 0.15);
-}
-
-.numero {
-  min-width: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #1d351d;
-  color: #75c943;
-  font-size: 40px;
-  font-weight: bold;
-}
-
-.conteudo-card {
-  padding: 25px;
-}
-
-.conteudo-card h3 {
-  font-size: 25px;
-  margin-bottom: 15px;
-  color: white;
-}
-
-.conteudo-card p {
-  color: #ccc;
-  line-height: 1.6;
-  margin-bottom: 18px;
-}
-
-.conteudo-card ul {
-  padding-left: 20px;
-  color: #8bc34a;
-}
-
-.conteudo-card li {
-  margin-bottom: 8px;
-}
-
-/* SOBRE */
-
-.sobre {
-  background: #101a10;
-  padding: 90px 20px;
-}
-
-.sobre p {
-  max-width: 850px;
-  margin: 20px auto;
-  color: #ccc;
-  line-height: 1.8;
-  text-align: center;
-  font-size: 17px;
-}
-
-/* FOOTER */
 
 footer {
-  background: #050905;
-  text-align: center;
-  padding: 30px;
-  color: #777;
-}
-
-footer p {
-  margin: 8px;
-}
-
-/* RESPONSIVIDADE */
-
-@media (max-width: 800px) {
-
-  nav {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  nav ul {
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h2 {
-    letter-spacing: 4px;
-  }
-}
-
-@media (max-width: 500px) {
-
-  .card {
-    flex-direction: column;
-  }
-
-  .numero {
-    min-height: 80px;
-  }
-
-  .hero {
-    min-height: 75vh;
-  }
-
-  .temporadas h2,
-  .sobre h2 {
-    font-size: 32px;
-  }
+    background-color: #0b120b;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
 }
 
